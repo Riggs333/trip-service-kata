@@ -1,8 +1,7 @@
+from tripservice_mechanical.DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
 
-from DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
 
 class TripDAO:
-  @staticmethod
-  def findTripsByUser(user):
-    raise DependendClassCallDuringUnitTestException("TripDAO should not be invoked on an unit test.")
-
+    @staticmethod
+    def find_trips_by_user(user):
+        raise DependendClassCallDuringUnitTestException("TripDAO should not be invoked on an unit test.")
