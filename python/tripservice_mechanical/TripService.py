@@ -5,7 +5,7 @@ from tripservice_mechanical.UserSession import UserSession
 
 class TripService:
     def get_trips_by_user(self, user):
-        logged_user = self.logged_in_user()
+        logged_user = UserSession.get_instance().get_logged_user()
         is_friend = False
         trip_list = []
         if logged_user:
@@ -18,6 +18,3 @@ class TripService:
             return trip_list
         else:
             raise UserNotLoggedInException()
-
-    def logged_in_user(self):
-        return UserSession.get_instance().get_logged_user()
