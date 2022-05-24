@@ -1,4 +1,4 @@
-from tripservice_mechanical.DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
+from tripservice.exceptions import DependendClassCallDuringUnitTestException
 
 
 class UserSession:
@@ -14,10 +14,10 @@ class UserSession:
 
     def is_user_logged_in(self, user):
         raise DependendClassCallDuringUnitTestException(
-            "UserSession.isUserLoggedIn() should not be called in an unit test"
+            "UserSession.is_user_logged_in() should not be called in an unit test"
         )
 
     def get_logged_user(self):
         raise DependendClassCallDuringUnitTestException(
-            "UserSession.getLoggedUser() should not be called in an unit test"
+            "UserSession.get_logged_user() should not be called in an unit test"
         )

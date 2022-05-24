@@ -1,6 +1,6 @@
-from tripservice_mechanical.TripDAO import TripDAO
-from tripservice_mechanical.UserNotLoggedInException import UserNotLoggedInException
-from tripservice_mechanical.UserSession import UserSession
+from tripservice.trip_repository import TripDAO
+from tripservice.exceptions import UserNotLoggedInException
+from tripservice.user_session import UserSession
 
 
 class TripService:

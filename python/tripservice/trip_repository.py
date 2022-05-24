@@ -1,4 +1,4 @@
-from tripservice_mechanical.DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
+from tripservice.exceptions import DependendClassCallDuringUnitTestException
 
 
 class TripDAO:
